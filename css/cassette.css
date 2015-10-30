@@ -1,0 +1,67 @@
+.wapper {
+	width: 200px;
+	height: 150px;
+}
+.cassette-base {
+	width: 100%;
+	height: 100%;
+	background-image: url("../img/tape.png");
+	background-size: 100% 100%;
+}
+#cassette-left {
+	position: absolute;
+	/*z-index: -99;*/
+	top: 69px;
+	left: 66px;
+	width: 19.5px;
+	height: 19.5px;
+	background-image: url("../img/tapeCircle.png");
+	background-size: 100% 100%;
+}
+#cassette-right {
+	position: absolute;
+	/*z-index: -99;*/
+	top: 69px;
+	left: 129px;
+	width: 19.5px;
+	height: 19.5px;
+	background-image: url("../img/tapeCircle.png");
+	background-size: 100% 100%;
+}
+.cassette {
+  -webkit-animation-name: cassette;
+  animation-name: cassette;
+
+  -webkit-animation-duration:1.5s;
+  animation-duration:1.5s;
+
+/*  -webkit-animation-timing-function:ease-in-out;
+  animation-timing-function:ease-in-out; /*逐渐放慢*/
+
+  -webkit-animation-timing-function:linear;
+  animation-timing-function:linear;
+
+  -webkit-animation-iteration-count:infinite;
+  animation-iteration-count:infinite;
+
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+
+  -webkit-transition:all .5s ease-in-out;
+  transition:all .5s ease-in-out;
+
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
+}
+@-webkit-keyframes cassette {
+  0%{
+    opacity:1;
+    -webkit-transform:rotate(0deg);
+    transform:rotate(0deg)
+  }
+  100%{
+  	opacity:1;
+    -webkit-transform:rotate(360deg);
+    transform:rotate(360deg)
+  }
+}
