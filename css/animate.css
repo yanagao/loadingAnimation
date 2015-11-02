@@ -16,31 +16,28 @@
 		-moz-border-radius:10px;
 }
 
-.loadingProgress{
-	background-color: #C81801;
-	/*margin-top:0;*/
-	/*margin-left:-250px;*/
+.progress-bar{
+	background-color: #fce093;
+	width: 250px;
+	height: 25px;
 
-	/*background-image:linear-gradient(-45deg,rgba(255,255,255,.4) 15%,transparent 15%,transparent 30%,rgba(255,255,255,.2) 30%,rgba(255,255,255,.2) 45%,transparent 45%,transparent 60%,rgba(255,255,255,.2) 60%,rgba(255,255,255,.2) 75%,transparent 75%,transparent);*/
-	animation-name:bounce_loadingProgress;
-	-webkit-animation-name:bounce_loadingProgress;
-
-	/*-webkit-animation-timing-function:ease-in-out;
-  	animation-timing-function:ease-in-out;*/
-
+	-webkit-animation-name: progress-bar;
+	animation-name: progress-bar;
+	/*动画速度变化*/
+	-webkit-animation-timing-function: ease-in-out;
+  	animation-timing-function: ease-in-out;
+	/*动画循环效果*/
     -webkit-animation-direction: normal;
     animation-direction: normal;
+	/*动画播放次数*/
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+	/*动画需要时间*/
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
 
-    -webkit-animation-iteration-count:infinite;
-    animation-iteration-count:infinite;
-
-	animation-duration:2s;
-	-webkit-animation-duration:2s;
-
-	width:250px;
-	height:19px;
 }
-@keyframes bounce_loadingProgress{
+@keyframes progress-bar{
 	from {
 		width: 0;
 	}
@@ -49,7 +46,7 @@
 	}
 }
 
-@-o-keyframes bounce_loadingProgress{
+@-o-keyframes progress-bar{
 	from {
 		width: 0;
 	}
@@ -58,7 +55,7 @@
 	}
 }
 
-@-ms-keyframes bounce_loadingProgress{
+@-ms-keyframes progress-bar{
 	from {
 		width: 0;
 	}
@@ -67,7 +64,7 @@
 	}
 }
 
-@-webkit-keyframes bounce_loadingProgress{
+@-webkit-keyframes progress-bar{
 	from {
 		width: 0;
 	}
@@ -76,7 +73,7 @@
 	}
 }
 
-@-moz-keyframes bounce_loadingProgress{
+@-moz-keyframes progress-bar{
 	from {
 		width: 0;
 	}
