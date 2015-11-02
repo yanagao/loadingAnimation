@@ -1,0 +1,218 @@
+.wrapper {
+	width: 500px;
+	height: 500px;
+	background-color: #fdd358;
+}
+#orange-base {
+	position: absolute;
+	top: 200px;
+	left: 100px;
+	width: 300px;
+	height: 45px;
+	overflow:hidden;
+	border: 8px solid;
+	border-color: #fce093;
+	background-color: #fce093;
+	margin:auto;
+	border-radius: 50px;
+}
+.orangeBar{
+	background-color: #ffa800;
+	margin-top: 0;
+	/*margin-left: 8px;*/
+
+	/*background-image:linear-gradient(-45deg,rgba(255,255,255,.4) 15%,transparent 15%,transparent 30%,rgba(255,255,255,.2) 30%,rgba(255,255,255,.2) 45%,transparent 45%,transparent 60%,rgba(255,255,255,.2) 60%,rgba(255,255,255,.2) 75%,transparent 75%,transparent);*/
+	animation-name: orangeBar;
+	-webkit-animation-name: orangeBar;
+
+	-webkit-animation-timing-function:ease-in-out;
+  	animation-timing-function:ease-in-out;
+
+    -webkit-animation-direction: normal;
+    animation-direction: normal;
+
+    -webkit-animation-iteration-count:infinite;
+    animation-iteration-count:infinite;
+
+	animation-duration:5s;
+	-webkit-animation-duration:5s;
+
+	width: 250px;
+	height: 45px;
+}
+@-webkit-keyframes orangeBar {
+	from {
+		width: 0;
+	}
+	to {
+		width: 284px;
+	}
+}
+#orange-right {
+	z-index: 99;
+	position: absolute;
+	top: 200px;
+	left: 355px;
+	width: 61px;
+	height: 61px;
+	background-image: url("../img/orangeRight.png");
+}
+
+.orangeRight {
+	-webkit-animation-name: orangeRight;
+	animation-name: orangeRight;
+
+	-webkit-animation-duration:1.5s;
+	animation-duration:1.5s;
+
+	/*  -webkit-animation-timing-function:ease-in-out;
+	animation-timing-function:ease-in-out; /*逐渐放慢*/
+
+	-webkit-animation-timing-function:linear;
+	animation-timing-function:linear;
+
+	-webkit-animation-iteration-count:infinite;
+	animation-iteration-count:infinite;
+
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+
+	-webkit-transition:all .5s ease-in-out;
+	transition:all .5s ease-in-out;
+
+	-webkit-animation-direction: normal;
+	animation-direction: normal;
+}
+@-webkit-keyframes orangeRight {
+	0%{
+		opacity:1;
+		-webkit-transform:rotate(0deg);
+		transform:rotate(0deg)
+	}
+	100%{
+		opacity:1;
+		-webkit-transform:rotate(360deg);
+		transform:rotate(360deg)
+	}
+}
+#leaf {
+	position: absolute;
+	/*top: 210px;*/
+	/*left: 380px;*/
+	width: 24px;
+	height: 13px;
+	background-image: url("../img/leaf.png");
+}
+@-webkit-keyframes leafRotate1 {
+	0%{
+    	opacity:1;
+        -webkit-transform: translate(380px, 210px) rotate(0);
+    	transform: translate(380px, 210px) rotate(0);
+  	}
+  	100%{
+  		opacity:1;
+        -webkit-transform: translate(100px, 220px) rotate(360deg);
+    	transform: translate(100px, 220px) rotate(360deg);
+  	}
+}
+.leaf1 {
+	-webkit-animation-name: leafRotate1;
+	animation-name: leafRotate1;
+
+	-webkit-animation-duration:1.5s;
+	animation-duration:1.5s;
+
+	-webkit-animation-timing-function:linear;
+	animation-timing-function:linear; 
+
+	-webkit-animation-iteration-count:infinite;
+	animation-iteration-count:infinite;
+
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+
+	-webkit-transition:all .5s ease-in-out;
+	transition:all .5s ease-in-out;
+
+	-webkit-animation-direction: normal;
+	animation-direction: normal;
+}
+@-webkit-keyframes leafRotate2 {
+	0%{
+    	opacity:1;
+        -webkit-transform: translate(380px, 210px) rotate(360deg);
+    	transform: translate(380px, 210px) rotate(360deg);
+  	}
+  	100%{
+  		opacity:1;
+        -webkit-transform: translate(120px, 220px) rotate(0);
+    	transform: translate(120px, 220px) rotate(0);
+  	}
+}
+.leaf2 {
+	-webkit-animation-name: leafRotate2;
+	animation-name: leafRotate2;
+
+	-webkit-animation-duration:1.5s;
+	animation-duration:1.5s;
+
+	animation-delay: .5s;
+    -webkit-animation-delay: .5s;
+
+	-webkit-animation-timing-function:linear;
+	animation-timing-function:linear; 
+
+	-webkit-animation-iteration-count:infinite;
+	animation-iteration-count:infinite;
+
+	-webkit-transform-origin: left;
+	transform-origin: 50% 50%;
+
+	-webkit-transition:all .5s ease-in-out;
+	transition:all .5s ease-in-out;
+
+	-webkit-animation-direction: normal;
+	animation-direction: normal;
+}
+@-webkit-keyframes leafRotate3 {
+	0%{
+    	opacity:1;
+        -webkit-transform: translate(380px, 0px) rotate(360deg);
+    	transform: translate(380px, 220px) rotate(360deg);
+  	}
+  	50%{
+  		opacity:1;
+        -webkit-transform: translate(120px, 7px) rotate(180deg);
+    	transform: translate(120px, 217px) rotate(180deg);
+  	}
+  	100%{
+  		opacity:1;
+        -webkit-transform: translate(98px, 10px) rotate(0);
+    	transform: translate(98px, 210px) rotate(0);
+  	}
+}
+.leaf3 {
+	-webkit-animation-name: leafRotate3;
+	animation-name: leafRotate3;
+
+	-webkit-animation-duration:1.5s;
+	animation-duration:1.5s;
+
+	animation-delay: .3s;
+    -webkit-animation-delay: .3s;
+
+	-webkit-animation-timing-function:linear;
+	animation-timing-function:linear; 
+
+	-webkit-animation-iteration-count:infinite;
+	animation-iteration-count:infinite;
+
+	-webkit-transform-origin: left;
+	transform-origin: 50% 50%;
+
+	-webkit-transition:all .5s ease-in-out;
+	transition:all .5s ease-in-out;
+
+	-webkit-animation-direction: normal;
+	animation-direction: normal;
+}
