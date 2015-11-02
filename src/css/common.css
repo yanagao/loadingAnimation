@@ -1,0 +1,51 @@
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+/*    Core CSS   核心CSS */
+#iArcMenu-content {
+	font-size: 16px;
+}
+
+/*
+Basic Shape CSS
+*/
+.iArcMenu-shape {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	line-height: 45px;
+	cursor: pointer;
+	font-size: 1em;
+	text-align: center;
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+
+/*
+Control Button CSS
+*/
+.iArcMenu-control {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	line-height: 45px;
+	cursor: pointer;
+	font-size: 10px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.iArcMenu-control-on {
+	background: #ffffff url('../img/plus.png') center center;
+	background-size: cover;
+}
+
+.iArcMenu-control-off {
+	background: #ffffff url('../img/minus.png') center center;
+	background-size: cover;
+}

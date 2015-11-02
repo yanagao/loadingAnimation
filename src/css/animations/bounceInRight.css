@@ -1,0 +1,66 @@
+@keyframes bounceInRight {
+  0%, 60%, 75%, 90%, 100% {
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(-25px, 0, 0);
+
+  }
+
+  75% {
+    transform: translate3d(10px, 0, 0);
+    -webkit-transform: skew(10deg, 0);    /* for Chrome || Safari */
+  }
+
+  85% {
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  100% {
+    transform: none;
+    -webkit-transform: skew(0, 0);    /* for Chrome || Safari */
+    visibility: visible;
+  }
+}
+@-webkit-keyframes bounceInRight {
+  0%, 60%, 75%, 90%, 100% {
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(-25px, 0, 0);
+
+  }
+
+  75% {
+    transform: translate3d(10px, 0, 0);
+    -webkit-transform: skew(10deg, 0);    /* for Chrome || Safari */
+  }
+
+  85% {
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  100% {
+    transform: none;
+    -webkit-transform: skew(0, 0);    /* for Chrome || Safari */
+    visibility: visible;
+  }
+}
+.bounceInRight {
+  -webkit-animation-name: bounceInRight;
+  animation-name: bounceInRight;
+}

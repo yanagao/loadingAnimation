@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>index</title>
+	<link rel="stylesheet" href="./css/animations/rubberBand.css">
+	<link rel="stylesheet" href="./css/animations/bounceInDown.css">
+	<link rel="stylesheet" href="./css/animations/fadeInUp.css">
+	<link rel="stylesheet" href="./css/animations/fadeInDown.css">
+	<link rel="stylesheet" href="./css/animations/zoomInUp.css">
+	<link rel="stylesheet" href="./css/animations/zoomInLeft.css">
+	<link rel="stylesheet" href="./css/animations/toBig.css">
+	<link rel="stylesheet" href="./css/animations/bounceInRight.css">
+	<link rel="stylesheet" href="./css/animations/lightSpeedIn.css">
+    <link rel="stylesheet" href="./css/pageAnimations.css">
+    <link rel="stylesheet" href="./css/common.css">
+	<style>
+		html, body{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #dom {
+            height: 100%;
+            width: auto;
+        }
+
+        .article:nth-child(1) {
+            background-image: url(./img/page/bg.jpg);
+        }
+
+        .article:nth-child(2) {
+            background-image: url(./img/page/bg.jpg);
+        }
+
+        .article:nth-child(3) {
+            background-color: #3498db;
+        }
+
+        .article:nth-child(4) {
+            background-color: #2ecc71;
+        }
+
+        .article:nth-child(5) {
+            background-color: #f1c40f;
+        }
+
+        .article:nth-child(6) {
+            background-color: #000;
+        }
+	</style>
+
+</head>
+<body>
+	<div id="dom">
+        <section class="article" id="iArcMenu-content">
+            <div class="page page-1">
+                <div class="page-main-show">
+                    <!-- <div id="monkey" class="ele-paste"></div> -->
+                    <div id="page-main-text" class="animateMainTextIn">
+                        <div class="main-title">AC 2015</div>
+                        <div>AlloyTeam倾力打造</div>
+                    </div>
+                </div>
+                <div id="pageImg">
+                    <div id="page-animateImg" class="animateImgIn"></div>
+                </div>
+            </div>
+        </section>
+        <section class="article">
+            <div class="page page-2">
+                <div class="page-function2-show">
+                    <div id="page-function2-animateImg1"></div>
+                    <div id="page-function2-animateImg2"></div>
+                    <div id="page-function2-animateImg3"></div>
+                </div>
+                <div id="page-function2-text">AlloyTeam</div>
+                <div id="page-function2-text-sub">此处为at介绍此处为at介绍
+                    <div>此处为at介绍此处为at介绍</div>
+                    <div>此处为at介绍此处为at介绍</div>
+                </div>
+
+            </div>
+        </section>
+        <section class="article"></section>
+        <section class="article"></section>
+        <section class="article"></section>
+        <section class="article"></section>
+    </div>
+	<script src="./js/component/ftouch.js"></script>
+    <script src="./js/component/fswipe.js"></script>
+    <!-- <script src="./js/component/iarcmenu.js"></script> -->
+
+    <script>
+
+        var list = [
+            {
+                content: "用户",
+                scale: 1.5,
+                callback: function() {
+                    alert(this.innerHTML);
+                }
+            },
+            {
+                content: "朋友",
+                scale: 1.5,
+                callback: function() {
+                    alert(this.innerHTML);
+                }
+            },
+            {
+                content: "设置",
+                scale: 1.5,
+                callback: function() {
+                    alert(this.innerHTML);
+                }
+            }
+        ];
+
+        var opt = {
+            wrapper: document.getElementById('dom'),
+            isVertical : true,
+            ontouchstart: function() {
+                console.log('start');
+            },
+            ontouchend: function() {
+                console.log('end');
+            },
+            swipe: {
+                onswipechange: function(index) {
+                    console.log('it is ' + index);
+                    // console.log(document.getElementById('iArcMenu-content'));
+                    if (index === 1) {
+                        // the first page out
+                        document.getElementById("page-main-text").className = document.getElementById("page-main-text").className.replace( /(?:^|\s)animateMainTextIn(?!\S)/g , '' )
+                        document.getElementById("page-main-text").classList.add("animateMainTextOut");
+                        document.getElementById("page-animateImg").className = document.getElementById("page-animateImg").className.replace( /(?:^|\s)animateImgIn(?!\S)/g , '' )
+                        document.getElementById("page-animateImg").classList.add("animateImgOut");
+
+                        // the second page in
+                        document.getElementById("page-function2-animateImg1").classList.add("animateFunction21In");
+                        document.getElementById("page-function2-animateImg2").classList.add("animateFunction22In");
+                        document.getElementById("page-function2-animateImg3").classList.add("animateFunction23In");
+                        document.getElementById("page-function2-text").classList.add("animateFunctionTextIn");
+                        document.getElementById("page-function2-text-sub").classList.add("animateFunctionTextIn");
+
+                    }
+
+                }
+            }
+        };
+        
+        ftouch.init(opt);
+        ftouch.register('fswipe');
+
+        
+    </script>
+</body>
+</html>
