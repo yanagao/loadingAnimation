@@ -1,5 +1,5 @@
 # loadingAnimation
-loading普通条
+loading普通条型
 http://yanagao.github.io/loadingAnimation/index.html
 
 loading cassette
